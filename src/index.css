@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-flo-light text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-flo-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-flo-primary text-white hover:bg-flo-primary/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-flo-secondary text-white hover:bg-flo-secondary/90;
+  }
+  
+  .btn-lg {
+    @apply h-11 px-8 rounded-md;
+  }
+  
+  .btn-sm {
+    @apply h-9 px-3 rounded-md;
+  }
+  
+  /* Download button animations */
+  .download-button-enter {
+    animation: downloadButtonFadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes downloadButtonFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Subtle pulse animation for buttons */
+  .download-button-pulse {
+    animation: subtlePulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes subtlePulse {
+    0%, 100% {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    50% {
+      box-shadow: 0 20px 35px -5px rgba(30, 64, 175, 0.15), 0 8px 10px -2px rgba(30, 64, 175, 0.1);
+    }
+  }
+}

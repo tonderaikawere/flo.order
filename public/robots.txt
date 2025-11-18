@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://flo-orders.floenergy.net/sitemap.xml
+
+# Disallow sensitive areas
+Disallow: /downloads/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1
