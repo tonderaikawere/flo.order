@@ -1,5 +1,4 @@
 import { Link, LinkProps } from 'react-router-dom'
-import { useEffect } from 'react'
 
 interface ScrollLinkProps extends LinkProps {
   children: React.ReactNode
